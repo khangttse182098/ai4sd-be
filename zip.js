@@ -10,7 +10,7 @@ export const generateZipFile = (content) => {
     .filter((line) => line.length > 0);
 
   // get the title
-  //   const title = filePaths.shift().replace("/", "");
+  const title = filePaths.shift().replace("/", "");
 
   console.log("title", title);
   console.log("folderTree", filePaths);
