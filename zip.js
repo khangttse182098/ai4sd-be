@@ -1,11 +1,4 @@
-import fs from "fs";
-import path from "path";
-import archiver from "archiver";
-import { fileURLToPath } from "url";
-import { dirname } from "path";
-import JSZip from "jszip";
 import pkg from "file-saver";
-const { saveAs } = pkg;
 
 export const generateZipFile = (content) => {
   // Your raw string (just paste the full string here, including \n)
@@ -35,37 +28,4 @@ export const generateZipFile = (content) => {
   console.log("file", files);
 
   return files;
-  // Define paths
-  //   const __filename = fileURLToPath(import.meta.url);
-  //   const __dirname = dirname(__filename);
-  //   const rootDir = path.join(__dirname, "project-root");
-  //   const appDir = path.join(rootDir, "app");
-  //   const filePath = path.join(appDir, "page.tsx");
-  //   const zipPath = path.join(__dirname, "linguaflow.zip");
-
-  //   // Ensure directory exists
-  //   fs.mkdirSync(appDir, { recursive: true });
-
-  //   // Write code to .tsx file (interprets \n as real line breaks)
-  //   fs.writeFileSync(filePath, rawCode, "utf8");
-
-  //   // Create a zip stream
-  //   const output = fs.createWriteStream(zipPath);
-  //   const archive = archiver("zip", { zlib: { level: 9 } });
-
-  //   output.on("close", () => {
-  //     console.log(`✅ Zip created: ${zipPath} (${archive.pointer()} bytes)`);
-  //   });
-
-  //   archive.on("error", (err) => {
-  //     throw err;
-  //   });
-
-  //   archive.pipe(output);
-
-  //   // Add folder with structure
-  //   archive.directory(rootDir, false);
-
-  //   // Finalize the zip
-  //   archive.finalize();
 };
