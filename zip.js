@@ -1,5 +1,3 @@
-import pkg from "file-saver";
-
 export const generateZipFile = (content) => {
   // Your raw string (just paste the full string here, including \n)
   //   const rawCode = `import { Star, Play, Users } from 'lucide-react'\n\nexport default function Hello() {\n  return <div>Hello World</div>;\n}`;
@@ -14,8 +12,8 @@ export const generateZipFile = (content) => {
   // get the title
   //   const title = filePaths.shift().replace("/", "");
 
-  //   console.log("title", title);
-  //   console.log("folderTree", filePaths);
+  console.log("title", title);
+  console.log("folderTree", filePaths);
 
   const fileRegex = /```[a-z]+ filename="(.+?)"\n([\s\S]*?)```/g;
   const files = [];
